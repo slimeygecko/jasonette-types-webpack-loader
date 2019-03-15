@@ -35,8 +35,8 @@ module.exports = function(source) {
     var result = exec.call(this, source, this.resourcePath);
 
     var sectionsPath = 'default.$jason.head.templates.body.sections';
-    var sections = get(result, sectionsPath, result)
-    if (sections) {
+    var sections = get(result, sectionsPath);
+    if (sections && Array.isArray(sections)) {
         result[sectionsPath] = sections.map(function(section) {
             section.items = transform(section.items);
 
