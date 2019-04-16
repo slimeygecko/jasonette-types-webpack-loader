@@ -8,5 +8,17 @@
   "license": "MIT",
   "dependencies": {
     "lodash.get": "^4.4.2"
+  },
+  "devDependencies": {
+    "file-loader": "^3.0.1",
+    "jest": "^24.7.1",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.4.3",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
+  },
+  "scripts": {
+    "buildTest": "webpack --config webpack.test.config.js",
+    "test": "jest"
   }
 }
